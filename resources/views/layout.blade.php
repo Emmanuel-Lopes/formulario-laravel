@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container bg-dark">
-        <h1 class="font-monospace display-3 card p-4 align-items-center text-center mt-3 mb-3">
-            @yield('cabecalho')
-        </h1>
-        
-        @yield('conteudo')
-         
+    <div class="d-flex">
+        <div class="container bg-dark">
+            <h1 class="font-monospace display-3 card p-4 align-items-center text-center mt-3 mb-3">
+                @yield('cabecalho')
+            </h1>
+            
+            @yield('conteudo')
+            
+        </div>
     </div>
 </body>
 </html>

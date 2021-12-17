@@ -9,7 +9,7 @@
 @endsection
 
 @section('conteudo')
-<form action="{{route('cadastrar')}}" method="get"></form>
+<form action="{{route('cadastrar')}}" method="get">
     <div class="card p-4 mb-3">
         <p class="font-monospace fs-4 fw-bold text-center">Informações Pessoais<hr class="mb-4"></p>
         <div class="mb-4">
@@ -45,7 +45,7 @@
             <input type="text" name="pai" id="pai" class="form-control" placeholder="Digite o nome completo aqui.">
         </div>
     </div>
-    <div class="card p-4 mb-4">
+    <div class="card p-4 mb-3">
         <p class="font-monospace fs-4 fw-bold text-center">Contatos<hr class="mb-4"></p>
         <div class="row align-items-center mb-4">
             <div class="col-4">
@@ -65,12 +65,45 @@
             </div>
         </div>
     </div>
-    <div class="card p-4">
+    <div class="card p-4 mb-3">
         <p class="font-monospace fs-4 fw-bold text-center">Endereço<hr class="mb-4"></p>
         <div class="mb-4">
             <i class="fas fa-home"></i>
             <label for="logr" class="form-label">Logradouro <abbr title="Este campo é obrigatório.">* </abbr></label>
             <input type="text" name="logr" id="logr" class="form-control" placeholder="Digite a rua, avenida, travessa...">
         </div>
+        <div class="row mb-4 align-items-center">
+            <div class="col-3">
+                <i class="fas fa-sort-numeric-up"></i>
+                <label for="num" class="form-label">Número <abbr title="Este campo é obrigatório."> *</abbr></label>
+                <input type="text" name="num" id="num" class="form-control" placeholder="Digite o número do endereço.">
+            </div>
+            <div class="col-9">
+                <i class="fas fa-map-marked-alt"></i>
+                <label for="comp" class="form-label">Complemento</label>
+                <input type="text" name="comp" id="comp" class="form-control" placeholder="Digite informações complementares.">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3">
+                <label for="cep">CEP <abbr title="Este campo é obrigatório."> *</abbr></label>
+                <input type="number" name="cep" id="cep" class="form-control" placeholder="Digite somente números.">
+            </div>
+            <div class="col-4">
+                <label for="uf">UF <abbr title="Este campo é obrigatório."> *</abbr></label>
+                <input type="text" name="uf" id="uf" class="form-control" placeholder="Digite somente as iniciais.">
+            </div>
+            <div class="col-5">
+                <i class="fas fa-flag"></i>
+                <label for="pais">País <abbr title="Este campo é obrigatório."> *</abbr></label>
+                <input type="text" name="pais" id="pais" class="form-control" placeholder="Digite o país.">
+            </div>
+        </div>
     </div>
+    <div class="d-flex justify-content-center">
+        <div class="card w-25 p-3 mb-3">
+            <button class="btn fw-bold btn-outline-success">Cadastrar</button>
+        </div>
+    </div>
+</form>
 @endsection
