@@ -86,7 +86,7 @@
     </div>
     <div class="d-flex justify-content-center">
         <div class="card w-25 p-3 mb-3">
-            <button class="btn fw-bold btn-outline-danger">Voltar</button>
+            <a href="{{route('cadastrar')}}" class="btn fw-bold btn-outline-danger">Novo Cadastro</a>
         </div>
     </div>
 @endsection
