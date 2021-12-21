@@ -9,11 +9,18 @@
 @endsection
 
 @section('conteudo')
-<form action="{{route('cadastrar')}}" method="get">
-    @error('nome','cpf','rg','nasc','mae','pai','email','tel1','tel2','logr','num','comp','cep','uf','pais')
-        <div class="alert alert-danger">
-            {{'message'}}
-        </div>
+@error('nome','cpf','rg','nasc','mae','pai','email','tel1','tel2','logr','num','comp','cep','uf','pais')
+    <div class="alert alert-danger">
+        {{'message'}}
+    </div>
+@enderror
+
+@if (!empty($mensagemRemocaoCadastro))
+    <div class="alert alert-danger">
+        {{$mensagemRemocaoCadastro}}
+    </div>
+<form action="" method="get">
+    @csrf
     <div class="card p-4 mb-3">
         <p class="font-monospace fs-4 fw-bold text-center">Informações Pessoais<hr class="mb-4"></p>
         <div class="mb-4">
@@ -93,11 +100,16 @@
                 <label for="cep" class="form-label fw-bold">CEP <abbr title="Este campo é obrigatório."> *</abbr></label>
                 <input required type="number" name="cep" id="cep" class="form-control" placeholder="Digite somente números.">
             </div>
-            <div class="col-4">
+            <div class="col-3">
+                <i class="fas fa-city"></i>
+                <label class="form-label fw-bold" for="cidade">Cidade <abbr title="Este campo é obrigatório"> *</abbr></label>
+                <input required type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite o nome da cidade.">
+            </div>
+            <div class="col-3">
                 <label for="uf" class="form-label fw-bold">UF <abbr title="Este campo é obrigatório."> *</abbr></label>
                 <input required type="text" name="uf" id="uf" class="form-control" placeholder="Digite somente as iniciais.">
             </div>
-            <div class="col-5">
+            <div class="col-3">
                 <i class="fas fa-flag"></i>
                 <label for="pais" class="form-label fw-bold">País <abbr title="Este campo é obrigatório."> *</abbr></label>
                 <input required type="text" name="pais" id="pais" class="form-control" placeholder="Digite o país.">
@@ -110,20 +122,4 @@
         </div>
     </div>
 </form>
-<!-- <script>
-    const form = document.getElementsByTagName('form')[0];
-
-    form.addEventListener('submit', function (event){
-        if(!form.validity.valid) {
-            alert('Há dados inválidos no formulário.');
-            event.preventDefault();
-        } else {
-            alert('Cadastro feito com sucesso!');
-        }
-    })
-
-    function validarInputs() {
-        let inputId = document.getElementById
-    }
-</script> -->
 @endsection

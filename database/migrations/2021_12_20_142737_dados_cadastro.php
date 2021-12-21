@@ -26,6 +26,7 @@ class DadosCadastro extends Migration
             $table -> string('número', 5);
             $table -> string('complemento', 250);
             $table -> string('cep', 7);
+            $table -> string('cidade',100);
             $table -> string('uf', 3);
             $table -> string('país', 100);
         });
