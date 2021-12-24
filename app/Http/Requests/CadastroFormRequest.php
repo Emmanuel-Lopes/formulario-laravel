@@ -24,17 +24,27 @@ class CadastroFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome', 'mae', 'pai', 'pais' => ['required','regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\']{2,150}+$/i'],
-            'cpf', 'tel1' => ['required','regex:/^\d{11}+$/i'],
-            'rg' => 'regex:/^\d{9}+$/i',
-            'tel2' => 'regex:/^\d{11}+$/i',
-            'nasc' => 'regex:/^\d{8}+$/i',
-            'email' => 'regex:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i',
-            'logr' => ['required','regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\']+$/i'],
-            'num' => ['required', 'regex:/^\d{1,5}+$/i'],
-            'comp' => 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\'\d]+$/i',
-            'cep' => ['required', 'regex:/^\d{8}+$/i'],
-            'uf' => ['required', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\']{2,3}+$/i']
+            'nome','mae','pai','cidade','pais' => ['required','string'],
+            'cpf','tel1' => ['required','digits:11'],
+            'rg' => ['digits:9', 'nullable'],
+            'tel2' => ['digits:11', 'nullable'],
+            'nasc' => ['required'],
+            'email' => ['required','regex:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i'],
+            'logr' => ['required','string'],
+            'num' => ['required', 'digits_between:1,5'],
+            'comp' => ['string', 'nullable'],
+            'cep' => ['required', 'digits:8'],
+            'uf' => ['required','string','max:3']
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'required' => 'O campo :attribute é obrigatório.',
+            'regex' => 'O campo :attribute é inválido.',
+            'digits' => 'O campo :attribute não tem o número de dígitos válido.',
+            'digits_between' => 'O campo :attribute não tem o número de dígitos válido.'
         ];
     }
 }

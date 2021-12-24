@@ -11,11 +11,25 @@
         body{
             background-color: black;
         }
+        input:invalid{
+            box-shadow: 0 0 5px 1px red;
+        }
+        input:focus:invalid{
+            box-shadow: none;
+            transition-duration: 0.5s;
+        }
     </style>
 </head>
-<body>
+<body class="font-monospace">
     <div class="d-flex">
         <div class="container bg-dark">
+            <nav class="navbar rounded p-3 mt-3 navbar-expand-lg navbar-light bg-light">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link fw-bold" href="{{route('cadastros')}}">Home</a>
+                    <a class="nav-item nav-link fw-bold" href="{{route('formulario')}}">Novo Cadastro</a>
+                </div>
+            </nav>
+
             <h1 class="font-monospace display-3 card p-4 align-items-center text-center mt-3 mb-3">
                 @yield('cabecalho')
             </h1>
