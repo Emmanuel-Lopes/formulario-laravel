@@ -30,34 +30,34 @@
             <div class="mb-4">
                 <i class="far fa-user"></i>
                 <label for="nome" class="form-label fw-bold">Nome completo <abbr title="Este campo é obrigatório."> *</abbr></label>
-                <input type="text"  name="nome" id="nome" class="form-control" placeholder="Digite o nome completo aqui." onchange="checkForErrors()">
+                <input type="text"  name="nome" id="nome" class="form-control" placeholder="Digite o nome completo aqui." onchange="checkForErrors(this.value)">
             </div>
             <div class="mb-4 row g-5 align-items-center justify-content-between">
                 <div class="col-4">
                     <i class="fas fa-id-card"></i>
                     <label for="cpf" class="form-label fw-bold">CPF <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="number" name="cpf" id="cpf" class="form-control" placeholder="Digite somente números." onchange="checkForErrors()">
+                    <input type="number" name="cpf" id="cpf" class="form-control" placeholder="Digite somente números." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-4">
                     <i class="fas fa-fingerprint"></i>
                     <label for="rg" class="form-label fw-bold">RG</label>
-                    <input type="number" name="rg" id="rg" class="form-control" placeholder="Digite somente números." onchange="checkForErrors()">
+                    <input type="number" name="rg" id="rg" class="form-control" placeholder="Digite somente números." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-4">
                     <i class="far fa-calendar-alt"></i>
                     <label class="form-label fw-bold" for="nasc">Data de nascimento <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="date" name="nasc" id="nasc" class="form-control">
+                    <input type="date" name="nasc" id="nasc" class="form-control" onchange="checkForErrors(this.value)">
                 </div>
             </div>
             <div class="mb-4">
                 <i class="fas fa-female"></i>
                 <label for="mae" class="form-label fw-bold">Nome da mãe</label>
-                <input type="text" name="mae" id="mae" class="form-control" placeholder="Digite o nome completo aqui.">
+                <input type="text" name="mae" id="mae" class="form-control" placeholder="Digite o nome completo aqui." onchange="checkForErrors(this.value)">
             </div>
             <div class="">
                 <i class="fas fa-male"></i>
                 <label for="pai" class="form-label fw-bold">Nome do pai</label>
-                <input type="text" name="pai" id="pai" class="form-control" placeholder="Digite o nome completo aqui.">
+                <input type="text" name="pai" id="pai" class="form-control" placeholder="Digite o nome completo aqui." onchange="checkForErrors(this.value)">
             </div>
         </div>
         <div class="card p-4 mb-3">
@@ -66,17 +66,17 @@
                 <div class="col-4">
                     <i class="fas fa-at"></i>
                     <label for="email" class="form-label fw-bold">Email <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="aloha@mail.ok">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="aloha@mail.ok" onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-4">
                     <i class="fas fa-mobile-alt"></i>
                     <label for="tel1" class="form-label fw-bold">Telefone 1 <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="number" name="tel1" id="tel1" class="form-control" placeholder="Digite somente números.">
+                    <input type="number" name="tel1" id="tel1" class="form-control" placeholder="Digite somente números." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-4">
                     <i class="fas fa-phone"></i>
                     <label for="tel2" class="form-label fw-bold">Telefone 2</label>
-                    <input type="number" name="tel2" id="tel2" class="form-control" placeholder="Digite somente números.">
+                    <input type="number" name="tel2" id="tel2" class="form-control" placeholder="Digite somente números." onchange="checkForErrors(this.value)">
                 </div>
             </div>
         </div>
@@ -85,38 +85,38 @@
             <div class="mb-4">
                 <i class="fas fa-home"></i>
                 <label for="logr" class="form-label fw-bold">Logradouro <abbr title="Este campo é obrigatório.">* </abbr></label>
-                <input type="text" name="logr" id="logr" class="form-control" placeholder="Digite a rua, avenida, travessa...">
+                <input type="text" name="logr" id="logr" class="form-control" placeholder="Digite a rua, avenida, travessa..." onchange="checkForErrors(this.value)">
             </div>
             <div class="row mb-4 align-items-center">
                 <div class="col-2">
                     <i class="fas fa-sort-numeric-up"></i>
                     <label for="num" class="form-label fw-bold">Número <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="text" name="num" id="num" class="form-control" placeholder="Digite o número do endereço.">
+                    <input type="text" name="num" id="num" class="form-control" placeholder="Digite o número do endereço." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-10">
                     <i class="fas fa-map-marked-alt"></i>
                     <label for="comp" class="form-label fw-bold">Complemento</label>
-                    <input type="text" name="comp" id="comp" class="form-control" placeholder="Digite informações complementares.">
+                    <input type="text" name="comp" id="comp" class="form-control" placeholder="Digite informações complementares." onchange="checkForErrors(this.value)">
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-3">
                     <label for="cep" class="form-label fw-bold">CEP <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="number" name="cep" id="cep" class="form-control" placeholder="Digite somente números.">
+                    <input type="number" name="cep" id="cep" class="form-control" placeholder="Digite somente números." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-3">
                     <i class="fas fa-city"></i>
                     <label class="form-label fw-bold" for="cidade">Cidade <abbr title="Este campo é obrigatório"> *</abbr></label>
-                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite o nome da cidade.">
+                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite o nome da cidade." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-3">
                     <label for="uf" class="form-label fw-bold">UF <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="text" name="uf" id="uf" class="form-control" placeholder="Digite somente as iniciais.">
+                    <input type="text" name="uf" id="uf" class="form-control" placeholder="Digite somente as iniciais." onchange="checkForErrors(this.value)">
                 </div>
                 <div class="col-3">
                     <i class="fas fa-flag"></i>
                     <label for="pais" class="form-label fw-bold">País <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="text" name="pais" id="pais" class="form-control" placeholder="Digite o país.">
+                    <input type="text" name="pais" id="pais" class="form-control" placeholder="Digite o país." onchange="checkForErrors(this.value)">
                 </div>
             </div>
         </div>
@@ -139,15 +139,20 @@
         }
     });
 
-    function checkForErrors() {
+    function checkForErrors(inputValue) {
 
-        let input = document.getElementsByTagName('input').value;
+        for (let i = 1; i < 17; i++) {
 
-        document.getElementsByTagName('input').addEventListener("change", function(event) {
+            let input = document.getElementsByTagName('input')[i];
 
-            const name = input.getAttribute("name");
+            let name = input.getAttribute("name");
+            
+            let regex = [/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$/i, /^\d{11}$/i,
+                        /^\d{9}$/i, /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i, /^\d{1,5}$/i,
+                        /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\d]+$/i, /^\d{8}$/i,
+                        /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{,3}$/i];
 
-            const regex = '';
+            let validInput;
 
             switch (name) {
                 case nome:
@@ -157,59 +162,57 @@
                 case pais:
                 case logr:
 
-                    regex = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$/i;
+                    validInput = inputValue.split(/ +/).every(parte => regex[0].test(parte));
                     
                     break;
                 case cpf: 
                 case tel1: 
                 case tel2:
 
-                    regex = /^\d{11}$/i;
+                    validInput = regex[1].test(inputValue);
 
                     break;
                 case rg: 
 
-                    regex = /^\d{9}$/i;
+                    validInput = regex[2].test(inputValue);;
 
                     break;
                 case email: 
 
-                    regex =  /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+                    validInput = regex[3].test(inputValue);
 
                     break;
                 case num: 
 
-                    regex = /^\d{1,5}$/i;
+                    validInput = regex[4].test(inputValue);
                     
                     break;
                 case comp: 
 
-                    regex = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\d]+$/i;
+                    validInput = inputValue.split(/ +/).every(parte => regex[5].test(parte));
 
                     break;
 
                 case cep: 
 
-                    regex = /^\d{8}$/i;
+                    validInput = regex[6].test(inputValue);
 
                     break;
                 case uf: 
 
-                    regex = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']{,3}$/i;
+                    validInput = regex[7].test(inputValue);
 
                     break;
                 default:
                     break;
             }
 
-            const validInput = regex.test(input);
-
             if (validInput === false) {
-                document.getElementsByTagName('input').setCustomValidity('Input inválido.');
+                input.setCustomValidity('Input inválido.');
             } else {
                 input.setCustomValidity('');
             }
-        })
+        }
     }
 </script>
 @endsection
