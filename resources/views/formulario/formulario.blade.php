@@ -49,20 +49,26 @@
                 <div class="col-4">
                     <i class="far fa-calendar-alt"></i>
                     <label class="form-label fw-bold" for="nasc">Data de nascimento <abbr title="Este campo é obrigatório."> *</abbr></label>
-                    <input type="date" name="nasc" id="nasc" class="form-control" onchange="getInputValueAndName(this.value, this.getAttribute('name'), document.querySelector('#nasc'))">
+                    <input type="date" name="nasc" id="nasc" class="form-control">
                 </div>
             </div>
             <div class="mb-4">
                 <i class="fas fa-female"></i>
-                <label for="mae" class="form-label fw-bold">Nome da mãe</label>
-                <input type="text" name="mae" id="mae" class="form-control" placeholder="Digite o nome completo aqui." 
-                onchange="validarNomeCompleto(this.value, document.querySelector('#mae'))">
+                <label class="form-label fw-bold">Nome da mãe</label>
+                <select class="form-select form-select-lg" name="mae" id="mae">
+                    @foreach($noms as $nom)
+                        <option value="{{$nom}}">{{$nom}}</option>
+                    @endforeach
+                </select>
             </div>
-            <div class="">
+            <div class="mb-4">
                 <i class="fas fa-male"></i>
-                <label for="pai" class="form-label fw-bold">Nome do pai</label>
-                <input type="text" name="pai" id="pai" class="form-control" placeholder="Digite o nome completo aqui." 
-                onchange="validarNomeCompleto(this.value, document.querySelector('#pai'))">
+                <label class="form-label fw-bold">Nome do pai</label>
+                <select class="form-select form-select-lg" name="pai" id="pai">
+                    @foreach($noms as $nom)
+                        <option value="{{$nom}}">{{$nom}}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="card p-4 mb-3">

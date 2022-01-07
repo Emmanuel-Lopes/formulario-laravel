@@ -30,14 +30,19 @@
                 <li class="list-group-item border rounded round-3 p-4 mb-3 shadow">
                     <div class="d-flex align-items-center fs-5 justify-content-between">
                         <a href="/cadastro/{{$cadastro->id}}" class="text-dark text-decoration-none">{{ $cadastro -> nome }}</a>
-                        <form action="/lista_cadastrados/remover_cadastro/{{$cadastro->id}}" method="post" 
-                        onsubmit="return confirm('Remover o cadastro de {{$cadastro->nome}}?')">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-sm btn-outline-danger">
-                                <i class="far fa-trash-alt"></i>
-                            </button>
-                        </form>
+                        <span class="d-flex">
+                            <a href="/cadastro/{{$cadastro->id}}/pais" class="btn btn-sm btn-info mr-1">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <form action="/lista_cadastrados/remover_cadastro/{{$cadastro->id}}" method="post" 
+                            onsubmit="return confirm('Remover o cadastro de {{$cadastro->nome}}?')">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </span>
                     </div>  
                 </li>
             @endforeach

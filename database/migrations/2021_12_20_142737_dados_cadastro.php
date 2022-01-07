@@ -13,22 +13,22 @@ class DadosCadastro extends Migration
      */
     public function up()
     {
-        Schema::create('dadosCadastrados', function(Blueprint $table) {
+        Schema::create('cadastros', function(Blueprint $table) {
+            $table -> id('id');
             $table -> string('nome', 150);
             $table -> string('cpf', 11);
-            $table -> string('rg', 9);
-            $table -> date('nascimento');
-            $table -> string('mãe', 150);
-            $table -> string('pai', 150);
+            $table -> string('rg', 9)->nullable();
+            $table -> date('nasc');
+            $table -> string('email',50);
             $table -> string('tel1', 11);
-            $table -> string('tel2', 11);
-            $table -> string('logradouro', 150);
-            $table -> string('número', 5);
-            $table -> string('complemento', 250);
-            $table -> string('cep', 7);
+            $table -> string('tel2', 11)->nullable();
+            $table -> string('logr', 150);
+            $table -> string('num', 5);
+            $table -> string('comp', 250)->nullable();
+            $table -> string('cep', 8);
             $table -> string('cidade',100);
-            $table -> string('uf', 3);
-            $table -> string('país', 100);
+            $table -> string('uf', 2);
+            $table -> string('pais', 100);
         });
     }
 
@@ -39,6 +39,6 @@ class DadosCadastro extends Migration
      */
     public function down()
     {
-        Schema::drop(table:'dadosCadastrados');
+        Schema::drop(table:'cadastros');
     }
 }

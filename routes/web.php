@@ -16,3 +16,5 @@ Route :: delete('/lista_cadastrados/remover_cadastro/{id}', [CadastroController 
 
 Route :: get('/cadastro/{id}', [CadastroController :: class, 'showCadastro'])
     -> name('showCadastro');
+
+Route :: get('/cadastro/{cadastroId}/pais', [CadastroController :: class, 'indexPais']);
